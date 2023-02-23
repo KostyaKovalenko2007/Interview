@@ -45,7 +45,7 @@ class Stack():
 [[{())}]
 Программа ожидает на вход строку со скобками. На выход сообщение: «Сбалансированно», если строка корректная, и «Несбалансированно», если строка составлена неверно.
 """
-def check_gramar(string='{{[(])]}}'):
+def check_gramar(string):
     grammar = {'{':'}','[':']','(':')'}
     s = Stack()
     for key in string:
@@ -58,5 +58,5 @@ def check_gramar(string='{{[(])]}}'):
     return 'Сбалансированно'
 
 if __name__ == '__main__':
-    print(check_gramar())
+    print(check_gramar('[([])((([[[]]])))]{()}'))
 
